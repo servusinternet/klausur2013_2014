@@ -1,0 +1,21 @@
+package klausurvorbereitung;
+
+public class GetraenkTest {
+	public static void main(String[] args) {
+		Getraenk[] kneipe_ref = new Getraenk[50];
+		
+		kneipe_ref[0] = new SaftGetraenk("O-Saft", 0.5, 2.80, 81.5);
+		kneipe_ref[1] = new SaftGetraenk("KiBa", 0.5, 3.20, 40);
+		
+		kneipe_ref[3] = new Getraenk("Pils", 0.5, 2.80);
+		kneipe_ref[4] = new Getraenk("Weissbier", 1.0, 6.40);
+		
+		for (int i=0; i<kneipe_ref.length;i++){
+			if(kneipe_ref[i] != null) {
+				System.out.println(kneipe_ref[i].toString());
+			} else {
+				System.out.println("Feldkomponente mit Index: " + i + " ist nicht belegt.");
+			}
+		}
+	}
+}
